@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/chyhryn/Lab3/icons/scalable/actions/">
+    <file preprocess="xml-stripblanks" alias="pencil-symbolic.svg">../data/icons/scalable/actions/pencil-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="draw-line-symbolic.svg">../data/icons/scalable/actions/draw-line-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="draw-rectangle-symbolic.svg">../data/icons/scalable/actions/draw-rectangle-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="draw-oval-symbolic.svg">../data/icons/scalable/actions/draw-oval-symbolic.svg</file>
+  </gresource>
+  <gresource prefix="/com/chyhryn/Lab3">
+    <file preprocess="xml-stripblanks">gtk/window.ui</file>
+    <file preprocess="xml-stripblanks">gtk/drawing-area.ui</file>
+    <file preprocess="xml-stripblanks">gtk/shape-picker.ui</file>
+    <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+    <file alias="style.css">gtk/style.css</file>
+  </gresource>
+</gresources>

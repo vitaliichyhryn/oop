@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=com.chyhryn.Lab5
+Exec=@bindir@/lab-5 --gapplication-service

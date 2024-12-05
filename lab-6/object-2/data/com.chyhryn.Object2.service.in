@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=com.chyhryn.Object2
+Exec=@bindir@/object-2 --gapplication-service

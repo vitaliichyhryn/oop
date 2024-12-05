@@ -1,0 +1,53 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $Window : Adw.ApplicationWindow {
+  title: _('Лабораторна робота №3');
+  default-width: 800;
+  default-height: 800;
+
+  content: Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {
+      [end]
+      MenuButton {
+        menu-model: primary-menu;
+        icon-name: "open-menu-symbolic";
+        primary: true;
+      }
+    }
+
+    content: Overlay {
+      child: $DrawingArea drawing_area {};
+
+      [overlay]
+      $ShapePicker {}
+    };
+  };
+}
+
+menu primary-menu {
+  item {
+    label: "Олівець";
+    action: "win.pick_shape";
+    target: "Олівець";
+  }
+
+  item {
+    label: "Лінія";
+    action: "win.pick_shape";
+    target: "Лінія";
+  }
+
+  item {
+    label: "Прямокутник";
+    action: "win.pick_shape";
+    target: "Прямокутник";
+  }
+
+  item {
+    label: "Еліпс";
+    action: "win.pick_shape";
+    target: "Еліпс";
+  }
+}

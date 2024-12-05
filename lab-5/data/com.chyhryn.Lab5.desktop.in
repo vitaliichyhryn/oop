@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=lab-5
+Exec=lab-5
+Icon=com.chyhryn.Lab5
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true

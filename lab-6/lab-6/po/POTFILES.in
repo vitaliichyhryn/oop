@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/com.chyhryn.Lab6.desktop.in
+data/com.chyhryn.Lab6.metainfo.xml.in
+data/com.chyhryn.Lab6.gschema.xml
+src/main.py
+src/window.py
+src/window.blp

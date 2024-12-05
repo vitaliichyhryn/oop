@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=object-2
+Exec=object-2
+Icon=com.chyhryn.Object2
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true

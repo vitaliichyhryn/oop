@@ -1,0 +1,66 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $ShapePicker : Gtk.Box {
+  margin-start: 24;
+  margin-end: 24;
+  margin-bottom: 24;
+  spacing: 6;
+  halign: center;
+  valign: end;
+
+  ToggleButton dot_toggle {
+    icon-name: "draw-dot-symbolic";
+    tooltip-text: "Крапка";
+    action-name: "win.pick_shape";
+    action-target: "'Крапка'";
+    styles ["flat"]
+  }
+
+  ToggleButton {
+    icon-name: "draw-line-symbolic";
+    tooltip-text: "Лінія";
+    group: dot_toggle;
+    action-name: "win.pick_shape";
+    action-target: "'Лінія'";
+    styles ["flat"]
+  }
+  
+  ToggleButton {
+    icon-name: "draw-line-with-circles-symbolic";
+    tooltip-text: "Лінія з кружками";
+    group: dot_toggle;
+    action-name: "win.pick_shape";
+    action-target: "'Лінія з кружками'";
+    styles ["flat"]
+  }
+
+  ToggleButton {
+    icon-name: "draw-rectangle-symbolic";
+    tooltip-text: "Прямокутник";
+    group: dot_toggle;
+    action-name: "win.pick_shape";
+    action-target: "'Прямокутник'";
+    styles ["flat"]
+  }
+  
+  ToggleButton {
+    icon-name: "draw-cube-symbolic";
+    tooltip-text: "Куб";
+    group: dot_toggle;
+    action-name: "win.pick_shape";
+    action-target: "'Куб'";
+    styles ["flat"]
+  }
+
+  ToggleButton {
+    icon-name: "draw-ellipse-symbolic";
+    tooltip-text: "Еліпс";
+    group: dot_toggle;
+    action-name: "win.pick_shape";
+    action-target: "'Еліпс'";
+    styles ["flat"]
+  }
+
+  styles ["overlay_toolbar"]
+}

@@ -1,0 +1,43 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $Window : Adw.ApplicationWindow {
+  title: _('Лабораторна робота №5');
+  default-width: 800;
+  default-height: 800;
+
+  content: Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {
+      [end]
+      MenuButton {
+        menu-model: primary-menu;
+        icon-name: "open-menu-symbolic";
+        primary: true;
+      }
+      [start]
+      Button {
+        icon-name: "table-symbolic";
+        clicked => $show_table();
+      }
+    }
+
+    content: Overlay overlay {
+
+      [overlay]
+      $ShapePicker {}
+    };
+  };
+}
+
+menu primary-menu {
+  item {
+    label: "Відкрити";
+    action: "win.open_file";
+  }
+
+  item {
+    label: "Зберегти";
+    action: "win.save_file";
+  }
+}

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=lab-3
+Exec=lab-3
+Icon=com.chyhryn.Lab3
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true

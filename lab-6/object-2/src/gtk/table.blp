@@ -1,0 +1,24 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $Table : ScrolledWindow {
+  hscrollbar-policy: never;
+  Adw.Clamp {
+    maximum-size: 200;
+    
+    Box {
+      margin-top: 18;
+      margin-start: 18;
+      margin-end: 18;
+      margin-bottom: 18;
+      orientation: vertical;
+      
+      Frame {  
+        ColumnView column_view {
+          show-column-separators: true;
+          show-row-separators: true;
+        }
+      }
+    }
+  }
+}

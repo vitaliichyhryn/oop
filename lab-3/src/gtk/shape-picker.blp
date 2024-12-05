@@ -1,0 +1,48 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $ShapePicker : Gtk.Box {
+  margin-start: 24;
+  margin-end: 24;
+  margin-bottom: 24;
+  spacing: 6;
+  halign: center;
+  valign: end;
+
+  ToggleButton pencil_toggle {
+    icon-name: "pencil-symbolic";
+    tooltip-text: "Олівець";
+    action-name: "win.pick_shape";
+    action-target: "'Олівець'";
+    styles ["flat"]
+  }
+
+  ToggleButton line_toggle {
+    icon-name: "draw-line-symbolic";
+    tooltip-text: "Лінія";
+    group: pencil_toggle;
+    action-name: "win.pick_shape";
+    action-target: "'Лінія'";
+    styles ["flat"]
+  }
+
+  ToggleButton rectangle_toggle {
+    icon-name: "draw-rectangle-symbolic";
+    tooltip-text: "Прямокутник";
+    group: pencil_toggle;
+    action-name: "win.pick_shape";
+    action-target: "'Прямокутник'";
+    styles ["flat"]
+  }
+
+  ToggleButton ellipse_toggle {
+    icon-name: "draw-oval-symbolic";
+    tooltip-text: "Еліпс";
+    group: pencil_toggle;
+    action-name: "win.pick_shape";
+    action-target: "'Еліпс'";
+    styles ["flat"]
+  }
+
+  styles ["overlay_toolbar"]
+}

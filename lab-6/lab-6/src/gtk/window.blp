@@ -1,0 +1,102 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $Window: Adw.ApplicationWindow {
+  title: _('Лабораторна робота №6');
+  default-width: 800;
+  default-height: 800;
+
+  content: Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {
+    }
+
+    content: Box {
+      orientation: vertical;
+      spacing: 18;
+      halign: center;
+      valign: center;
+      
+      Box {
+        orientation: vertical;
+        spacing: 18;
+        
+        Label {
+          label: _("Число точок");
+        }
+        
+        Entry point_num_entry {
+        }
+      }
+      
+      Box {
+        orientation: horizontal;
+        spacing: 18;
+        
+        Box {
+          orientation: vertical;
+          spacing: 18;
+          
+          Label {
+            label: _("Нижня межа x");
+          }
+          
+          Entry x_low_entry {
+          }
+        }
+        
+        Box {
+          orientation: vertical;
+          spacing: 18;
+          
+          Label {
+            label: _("Верхня межа x");
+          }
+          
+          Entry x_up_entry {
+          }
+        }
+      }
+      
+      Box {
+        orientation: horizontal;
+        spacing: 18;
+        
+        Box {
+          orientation: vertical;
+          spacing: 18;
+          
+          Label {
+            label: _("Нижня межа y");
+          }
+          
+          Entry y_low_entry {
+          }
+        }
+      
+        Box {
+          orientation: vertical;
+          spacing: 18;
+          
+          Label {
+            label: _("Верхня межа y");
+          }
+          
+          Entry y_up_entry {
+          }
+        }
+      }
+      
+      Button {
+        label: _("Виконати");
+        action-name: "app.run";
+        margin-top: 18;
+
+        styles [
+          "pill",
+          "suggested-action",
+        ]
+      }
+    };
+  };
+}
