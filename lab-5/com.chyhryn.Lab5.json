@@ -29,8 +29,8 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "file:///home/vitalii/Projects/Uni/Object-Oriented Programming"
+                    "type" : "dir",
+                    "url" : "./"
                 }
             ]
         }
