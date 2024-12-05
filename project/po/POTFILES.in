@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/com.chyhryn.Project.desktop.in
+data/com.chyhryn.Project.metainfo.xml.in
+data/com.chyhryn.Project.gschema.xml
+src/main.py
+src/window.py
+src/window.ui

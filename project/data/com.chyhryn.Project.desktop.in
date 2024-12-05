@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=project
+Exec=project
+Icon=com.chyhryn.Project
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true

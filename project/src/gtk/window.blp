@@ -1,0 +1,31 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $Window: Adw.ApplicationWindow {
+  title: _('Розрахунково-графічна робота');
+  default-width: 800;
+  default-height: 600;
+
+  Adw.ToolbarView toolbar_view {
+    [top]
+    Adw.HeaderBar {}
+    
+    Box {
+      orientation: vertical;
+      halign: center;
+      valign: center;
+      spacing: 18;
+      
+      Button {
+        label: _("Зареєструватися");
+        action-name: "win.sign_up";
+        margin-top: 18;
+
+        styles [
+          "pill",
+          "suggested-action",
+        ]
+      }
+    }
+  }
+}

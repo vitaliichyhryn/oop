@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="project">
+	<schema id="com.chyhryn.Project" path="/com/chyhryn/Project/">
+	</schema>
+</schemalist>

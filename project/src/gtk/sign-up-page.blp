@@ -1,0 +1,58 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $SignUpPage : Adw.NavigationPage {
+  Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {
+      show-back-button: false;
+    }
+    
+    CenterBox {
+      valign: center;
+      margin-start: 18;
+      margin-end: 18;
+      
+      [start]
+      Button prev_button {
+        valign: center;
+        visible: false;
+        icon-name: "go-previous-symbolic";
+        styles [
+          "circular",
+        ]
+      }
+      
+      [center]
+      Box {
+        orientation: vertical;
+        halign: center;
+        valign: center;
+        spacing: 18;
+        
+        Adw.PreferencesGroup entry_row_group {}
+      }
+      
+      [end]
+      Box {
+        Button next_button {
+          valign: center;
+          icon-name: "go-next-symbolic";
+          styles [
+            "circular",
+          ]
+        }
+        
+        Button submit_button {
+          visible: false;
+          valign: center;
+          icon-name: "object-select-symbolic";
+          styles [
+            "circular",
+            "suggested-action",
+          ]
+        }
+      }
+    }
+  }
+}
