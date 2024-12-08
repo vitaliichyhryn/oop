@@ -6,11 +6,14 @@ from .sign_up import SignUpDialog
 class Window(Adw.ApplicationWindow):
     __gtype_name__ = 'Window'
     
+    sign_up_button: Gtk.Button = Gtk.Template.Child()
     toolbar_view: Adw.ToolbarView = Gtk.Template.Child()
+    box: Gtk.Box = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.create_action("sign_up", self.on_sign_up)
+        self.user_data_box = None
     
     def create_action(self, name, callback, shortcuts=None):
         action = Gio.SimpleAction.new(name, None)
@@ -20,6 +23,7 @@ class Window(Adw.ApplicationWindow):
             self.set_accels_for_action(f"app.{name}", shortcuts)
     
     def on_sign_up(self, action, button):
-        sign_up_dialog = SignUpDialog()
+        sign_up_dialog = SignUpDialog(self)
         sign_up_dialog.present()
+        self.sign_up_button.set_sensitive(False)
         

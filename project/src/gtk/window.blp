@@ -3,23 +3,24 @@ using Adw 1;
 
 template $Window: Adw.ApplicationWindow {
   title: _('Розрахунково-графічна робота');
-  default-width: 800;
+  default-width: 400;
   default-height: 600;
 
   Adw.ToolbarView toolbar_view {
     [top]
     Adw.HeaderBar {}
     
-    Box {
+    Box box {
       orientation: vertical;
       halign: center;
       valign: center;
       spacing: 18;
-      
-      Button {
+
+      Button sign_up_button {
         label: _("Зареєструватися");
         action-name: "win.sign_up";
         margin-top: 18;
+        margin-bottom: 18;
 
         styles [
           "pill",
