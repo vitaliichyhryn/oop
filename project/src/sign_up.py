@@ -1,9 +1,9 @@
 import json
 from gi.repository import Adw, Gtk, GLib, Gio
 
-@Gtk.Template(resource_path='/com/chyhryn/Project/gtk/sign-up-dialog.ui')
-class SignUpDialog(Adw.Dialog):
-    __gtype_name__ = 'SignUpDialog'
+@Gtk.Template(resource_path='/com/chyhryn/Project/gtk/sign-up-window.ui')
+class SignUpWindow(Adw.Window):
+    __gtype_name__ = 'SignUpWindow'
     
     view = Gtk.Template.Child()
     
@@ -50,7 +50,6 @@ class SignUpDialog(Adw.Dialog):
         self.save_user_data(user_data)
         self.display_user_data(user_data)
         self.close()
-        self.win.sign_up_button.set_sensitive(True)
 
     def on_page_changed(self, *_):
         visible_page = self.view.get_visible_page()
@@ -101,7 +100,6 @@ class SignUpDialog(Adw.Dialog):
         self.win.user_data_box = box
         self.win.box.prepend(box)
 
-
 @Gtk.Template(resource_path='/com/chyhryn/Project/gtk/sign-up-page.ui')
 class SignUpPage(Adw.NavigationPage):
     __gtype_name__ = "SignUpPage"
@@ -111,14 +109,14 @@ class SignUpPage(Adw.NavigationPage):
     next_button = Gtk.Template.Child()
     submit_button = Gtk.Template.Child()
     
-    def __init__(self, dialog, title, entry_fields, **kwargs):
+    def __init__(self, sign_up_win, title, entry_fields, **kwargs):
         super().__init__(title=title, **kwargs)
         
-        self.dialog = dialog
+        self.sign_up_win = sign_up_win
         
-        self.prev_button.connect("clicked", dialog.on_prev_page)
-        self.next_button.connect("clicked", dialog.on_next_page)
-        self.submit_button.connect("clicked", dialog.on_submit)
+        self.prev_button.connect("clicked", sign_up_win.on_prev_page)
+        self.next_button.connect("clicked", sign_up_win.on_next_page)
+        self.submit_button.connect("clicked", sign_up_win.on_submit)
         
         self.entry_rows = {}
         for field_name in entry_fields:

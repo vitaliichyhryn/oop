@@ -6,7 +6,7 @@ blueprints = custom_target('blueprints',
   input: files(
     'gtk/help-overlay.blp',
     'gtk/window.blp',
-    'gtk/sign-up-dialog.blp',
+    'gtk/sign-up-window.blp',
     'gtk/sign-up-page.blp',
   ),
   output: '.',

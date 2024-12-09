@@ -1,6 +1,6 @@
 from gi.repository import Adw, Gtk, Gio
 
-from .sign_up import SignUpDialog
+from .sign_up import SignUpWindow
 
 @Gtk.Template(resource_path='/com/chyhryn/Project/gtk/window.ui')
 class Window(Adw.ApplicationWindow):
@@ -23,7 +23,8 @@ class Window(Adw.ApplicationWindow):
             self.set_accels_for_action(f"app.{name}", shortcuts)
     
     def on_sign_up(self, action, button):
-        sign_up_dialog = SignUpDialog(self)
-        sign_up_dialog.present()
+        sign_up_win = SignUpWindow(self)
+        sign_up_win.present()
+        sign_up_win.connect("close-request", lambda *_: self.sign_up_button.set_sensitive(True))
         self.sign_up_button.set_sensitive(False)
         

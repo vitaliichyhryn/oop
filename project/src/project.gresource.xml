@@ -3,7 +3,7 @@
   <gresource prefix="/com/chyhryn/Project">
     <file preprocess="xml-stripblanks">gtk/window.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
-    <file preprocess="xml-stripblanks">gtk/sign-up-dialog.ui</file>
+    <file preprocess="xml-stripblanks">gtk/sign-up-window.ui</file>
     <file preprocess="xml-stripblanks">gtk/sign-up-page.ui</file>
   </gresource>
 </gresources>
